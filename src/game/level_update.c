@@ -1169,11 +1169,7 @@ static s32 play_mode_unused(void) {
 // ex-alo change
 // Checks for peach intro skip
 u8 should_intro_be_skipped(void) {
-    return save_file_exists(gCurrSaveFileNum - 1) || gDebugLevelSelect || (gGlobalGameSkips & GAME_SKIP_INTRO_SCENE)
-#ifndef TARGET_N64
-    || configSkipIntro == TRUE
-#endif
-    ;
+    return TRUE; // jupiter change: force skip
 }
 
 // ex-alo change

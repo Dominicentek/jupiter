@@ -9,15 +9,15 @@ EXT_OPTIONS_MENU ?= 1
 # Enable debug options menu (Enabled if DEBUG is not 0)
 EXT_DEBUG_MENU ?= 0
 # Enable better camera (Puppycam 2)
-BETTERCAMERA ?= 1
+BETTERCAMERA ?= 0
 # Enable cheats
 CHEATS_ACTIONS ?= 1
 # Enable rumble functions (Originally in Shindou)
-RUMBLE_FEEDBACK ?= 1
+RUMBLE_FEEDBACK ?= 0
 # Disable no drawing distance by default
-NODRAWINGDISTANCE ?= 0
+NODRAWINGDISTANCE ?= 1
 # Enable Goddard (Mario Face)
-GODDARD_MFACE ?= 1
+GODDARD_MFACE ?= 0
 # Kaze MOP Objects Port, disabled by default
 PORT_MOP_OBJS ?= 0
 # Enable level vanilla checks
@@ -32,22 +32,22 @@ RM2C ?= 0
 # --------------------------------------
 
 # Quality of life fixes
-QOL_FIXES ?= 1
+QOL_FIXES ?= 0
 # Quality of life features
-QOL_FEATURES ?= 1
+QOL_FEATURES ?= 0
 # Quality of life redone files
-QOL_REDONE ?= 1
+QOL_REDONE ?= 0
 
 # --------------------------------------
 # Port Only Defines
 # --------------------------------------
 
 # Enable 60 fps interpolation
-HIGH_FPS_PC ?= 0
+HIGH_FPS_PC ?= 1
 # Disable text-based save-files by default
 TEXTSAVES ?= 0
 # Load resources from external files
-EXTERNAL_DATA ?= 0
+EXTERNAL_DATA ?= 1
 # Enable Discord Rich Presence
 DISCORDRPC ?= 0
 # Enable Command Line Options
