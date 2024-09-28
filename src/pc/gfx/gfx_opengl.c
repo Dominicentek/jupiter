@@ -53,6 +53,7 @@
 #include "gfx_rendering_api.h"
 #include "gfx_screen_config.h"
 #include "gfx_pc.h"
+#include "jupiter/ui.h"
 
 struct ShaderProgram {
     uint32_t shader_id;
@@ -1032,6 +1033,7 @@ static void gfx_opengl_start_frame(void) {
 }
 
 static void gfx_opengl_end_frame(void) {
+    jupiter_update_ui();
     if (USE_FRAMEBUFFER) {
         // Set the shader and vertex attribs for quad rendering
 

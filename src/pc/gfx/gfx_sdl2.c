@@ -37,6 +37,7 @@ void Sleep(unsigned long ms);
 #include "gfx_screen_config.h"
 #include "../pc_main.h"
 #include "../configfile.h"
+#include "jupiter/ui.h"
 
 #ifdef COMMAND_LINE_OPTIONS
 #include "../cliopts.h"
@@ -227,6 +228,8 @@ static void gfx_sdl_init(const char *window_title) {
     );
     ctx = SDL_GL_CreateContext(wnd);
 
+    jupiter_init_ui(wnd, ctx);
+
     gfx_sdl_set_framerate();
 
     gfx_sdl_set_fullscreen();
@@ -326,6 +329,7 @@ static void gfx_sdl_fingerup(SDL_TouchFingerEvent sdl_event) {
 static void gfx_sdl_handle_events(void) {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
+        jupiter_handle_event(&event);
         switch (event.type) {
 #ifndef TARGET_WEB
             // Scancodes are broken in Emscripten SDL2: https://bugzilla.libsdl.org/show_bug.cgi?id=3259

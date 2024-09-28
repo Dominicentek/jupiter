@@ -57,7 +57,7 @@ COMMAND_LINE_OPTIONS ?= 1
 # Custom Defines
 # --------------------------------------
 
-CUSTOM_C_DEFINES :=
+CUSTOM_C_DEFINES := -DEXPORT=extern\ \"C\"
 
 ifeq ($(TARGET_N64),0)
 

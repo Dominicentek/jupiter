@@ -577,7 +577,7 @@ ACTOR_DIR      := actors
 LEVEL_DIRS     := $(patsubst levels/%,%,$(dir $(wildcard levels/*/header.h)))
 
 # Directories containing source files
-SRC_DIRS := src src/engine src/game src/audio src/menu src/buffers src/extras actors levels bin bin/$(VERSION) data assets sound
+SRC_DIRS := src src/jupiter src/jupiter/imgui src/engine src/game src/audio src/menu src/buffers src/extras actors levels bin bin/$(VERSION) data assets sound
 BOOT_DIR := src/boot
 ifeq ($(TARGET_N64),1)
   SRC_DIRS += asm lib src/extras/n64
